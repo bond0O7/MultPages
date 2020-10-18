@@ -1,4 +1,4 @@
-QT += gui widgets testlib
+QT += gui widgets
 
 TEMPLATE = lib
 CONFIG += staticlib
