@@ -63,3 +63,12 @@ bool MultPages::connectPages(ScreenPage *sender, ScreenPage *reciever,
   }
   return true;
 }
+
+template <typename Func> ScreenPage *MultPages::getPageWhere(Func func) {
+  for (auto i = 0; i < this->count(); ++i) {
+    if (const auto page = pageAt(i); func(page)) {
+      return page;
+    }
+  }
+  return nullptr;
+}

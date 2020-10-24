@@ -71,6 +71,11 @@ public slots:
    */
   void removeCurrent();
 
+  /*!
+   *\brief getPageWhere return a page pointer where it meets the condition
+   */
+  template <typename Func> ScreenPage *getPageWhere(Func func);
+
 public:
   QVariant lastDataFromPage(ScreenPage *);
 
